@@ -8,16 +8,16 @@ import {Page404balanceComponent} from "./components/page404balance/page404balanc
 const routes: Routes = [
   {
     path: '', component: BalanceComponent, children: [
-
+      {
+        path: '', redirectTo: 'casual', pathMatch: 'full'
+      },
       {
         path: 'casual', component: CasualComponent
       },
       {
         path: 'earned', component: EarnedComponent
       },
-      {
-        path: '', redirectTo: 'casual', pathMatch: 'full'
-      },
+
       { path: '**', component:  Page404balanceComponent}
     ]
   }

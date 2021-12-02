@@ -8,12 +8,13 @@ const routes: Routes = [
   {
     path: '', component: LeavesComponent, children: [
       {
+        path: '', redirectTo: 'apply', pathMatch: 'full'
+      },
+      {
         path: 'apply', component: ApplyComponent
       },
       { path: 'balance', loadChildren: () => import(`src/app/modules/balance/balance.module`).then(m => m.BalanceModule) },
-      {
-        path: '', redirectTo: 'apply', pathMatch: 'full'
-      },
+
       { path: '**', component: Page404leavesComponent }
     ]
   }
