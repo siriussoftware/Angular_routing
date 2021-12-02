@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'attendance', component: AttendanceComponent },
-  { path: 'leaves', loadChildren: () => import(`src/app/modules/leaves/components/leaves/leaves.module`).then(m => m.LeavesModule) },
+  { path: 'leaves2', loadChildren: () => import(`src/app/modules/leaves/leaves.module`).then(m => m.LeavesModule) },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '**', component: Page404Component },
 ];
