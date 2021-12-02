@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {LeavesComponent} from "./components/leaves/leaves.component";
-import {ApplyComponent} from "./components/apply/apply.component";
+import {ApplyComponent} from "../apply/apply.component";
 import {Page404leavesComponent} from "./components/page404leaves/page404leaves.component";
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
       {
         path: 'apply', component: ApplyComponent
       },
-      { path: 'balance', loadChildren: () => import(`./components/balance/balance.module`).then(m => m.BalanceModule) },
+      { path: 'balance', loadChildren: () => import(`src/app/modules/leaves/components/balance/balance.module`).then(m => m.BalanceModule) },
       {
         path: '', redirectTo: 'apply', pathMatch: 'full'
       },
